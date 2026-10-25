@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alfaiataria Personalizada & Vestidos Sob Medida | Ateliê Autoral</title>
+  
+  <!-- SEO & Open Graph Meta Tags -->
+  <meta name="description" content="Transforme sua foto de referência em uma peça exclusiva de alfaiataria ou vestido sob medida. Converse diretamente com a especialista e crie uma roupa personalizada para o seu corpo e estilo.">
+  <meta name="keywords" content="alfaiataria personalizada, vestido sob medida, alfaiataria feminina, roupas sob medida, ateliê de costura, alta costura personalizada">
+  <meta name="author" content="Ateliê Autoral">
+  <meta name="theme-color" content="#191816">
+
+  <!-- Open Graph / Facebook / WhatsApp Preview -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Alfaiataria Personalizada & Vestidos Sob Medida | Ateliê Autoral">
+  <meta property="og:description" content="O vestido que você imaginou. Feito sob medida para você. Envie sua foto de referência e crie uma peça personalizada.">
+  <meta property="og:image" content="assets/images/hero.jpg">
+  <meta property="og:url" content="https://atelieautoral.com.br">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Alfaiataria Personalizada | Ateliê Autoral">
+  <meta name="twitter:description" content="Transforme sua foto de inspiração em uma peça única sob medida. Atendimento próximo e alfaiataria autoral.">
+  <meta name="twitter:image" content="assets/images/hero.jpg">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Schema.org JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Ateliê Autoral — Alfaiataria Personalizada",
+    "image": "assets/images/hero.jpg",
+    "description": "Confecção de peças de alfaiataria feminina e vestidos sob medida inspirados em referências visuais.",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "São Paulo",
+      "addressRegion": "SP",
+      "addressCountry": "BR"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER / NAVBAR
+       ========================================================================== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#hero" class="brand-logo" id="brandLogoLink" aria-label="Ir para o início">
+        <span class="brand-name" data-config="brandName">Ateliê Autoral</span>
+        <span class="brand-tagline">Alfaiataria & Alta-Costura</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Navegação principal">
+        <ul class="nav-links">
+          <li><a href="#processo" class="nav-link">O Processo</a></li>
+          <li><a href="#galeria" class="nav-link">Inspirações</a></li>
+          <li><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
+          <li><a href="#especialista" class="nav-link">A Especialista</a></li>
+          <li><a href="#duvidas" class="nav-link">Dúvidas</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta-wrap">
+        <a href="#" class="btn btn-primary header-btn js-whatsapp-link" data-whatsapp-source="header" id="headerWhatsappBtn">
+          <span>Conversar no WhatsApp</span>
+        </a>
+
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Abrir menu de navegação" aria-expanded="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu -->
+  <div class="mobile-drawer-backdrop" id="mobileDrawerBackdrop"></div>
+  <aside class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+    <div class="mobile-drawer-top">
+      <div class="mobile-drawer-header">
+        <span class="brand-name" data-config="brandName">Ateliê Autoral</span>
+        <button class="mobile-close-btn" id="mobileCloseBtn" aria-label="Fechar menu">&times;</button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="#hero" class="mobile-nav-link js-mobile-link">Início</a></li>
+        <li><a href="#processo" class="mobile-nav-link js-mobile-link">O Processo</a></li>
+        <li><a href="#galeria" class="mobile-nav-link js-mobile-link">Inspirações</a></li>
+        <li><a href="#diferenciais" class="mobile-nav-link js-mobile-link">Diferenciais</a></li>
+        <li><a href="#especialista" class="mobile-nav-link js-mobile-link">A Especialista</a></li>
+        <li><a href="#duvidas" class="mobile-nav-link js-mobile-link">Dúvidas Frequentes</a></li>
+      </ul>
+    </div>
+    <div class="mobile-drawer-footer">
+      <a href="#" class="btn btn-primary btn-block js-whatsapp-link" data-whatsapp-source="mobile-drawer" id="drawerWhatsappBtn">
+        <span>Falar com a Especialista</span>
+      </a>
+      <p class="microcopy text-center" style="margin-top: 1rem;">Atendimento exclusivo com hora marcada</p>
+    </div>
+  </aside>
+
+  <main id="mainContent">
+
+    <!-- ==========================================================================
+         SEÇÃO 1 — HERO: CAPTURAR A ATENÇÃO IMEDIATAMENTE
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Copy -->
+          <div class="hero-content fade-in-up in-view">
+            <span class="eyebrow">ALFAIATARIA PERSONALIZADA • FEITA PARA VOCÊ</span>
+            
+            <h1 class="hero-headline">
+              O vestido que você imaginou. <em>Feito sob medida para você.</em>
+            </h1>
+
+            <p class="hero-subheadline">
+              Encontrou aquele look perfeito em uma foto? Envie sua referência. Vamos conversar sobre o modelo, escolher os detalhes e criar uma peça personalizada para suas medidas, seu estilo e a ocasião que você deseja viver.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#" class="btn btn-primary js-whatsapp-link" data-whatsapp-source="hero" id="heroPrimaryCta">
+                <svg class="btn-icon" viewBox="0 0 24 24">
+                  <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"/>
+                </svg>
+                <span>QUERO CRIAR MINHA PEÇA</span>
+              </a>
+
+              <a href="#processo" class="btn btn-secondary" id="heroSecondaryCta">
+                <span>VER COMO FUNCIONA</span>
+              </a>
+            </div>
+
+            <span class="microcopy">
+              Converse diretamente com a especialista pelo WhatsApp.
+            </span>
+
+            <!-- Trust badges strip -->
+            <div class="hero-badges-strip">
+              <div class="hero-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Modelagem Individual</span>
+              </div>
+              <div class="hero-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Acabamento Artesanal</span>
+              </div>
+              <div class="hero-badge-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span>Orientação de Tecidos</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Image & Visual Composition -->
+          <div class="hero-visual fade-in-up in-view">
+            <figure class="hero-image-wrapper">
+              <img src="assets/images/hero.jpg" alt="Mulher elegante vestindo blazer de alfaiataria marfim sob medida em um ateliê de alta costura" width="600" height="800" loading="eager">
+            </figure>
+
+            <div class="hero-floating-card">
+              <span class="hero-floating-card-tag">Exclusividade Autoral</span>
+              <p class="hero-floating-card-text">“A sua referência transformada em uma peça feita para o seu corpo.”</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SEÇÃO 2 — IDENTIFICAÇÃO: A CLIENTE PRECISA SE RECONHECER
+         ========================================================================== -->
+    <section class="section-spacing identification-section" id="identificacao">
+      <div class="container">
+        <div class="ident-grid">
+          
+          <div class="ident-header fade-in-up">
+            <span class="eyebrow">A BUSCA POR UMA PEÇA ÚNICA</span>
+            <h2 class="section-title">
+              Você já encontrou uma roupa linda e pensou: <em>queria uma dessas para mim?</em>
+            </h2>
+            
+            <div class="ident-quote-highlight">
+              <p>“Seu estilo não precisa ficar limitado ao que está pronto nas araras.”</p>
+            </div>
+          </div>
+
+          <div class="ident-cards-column fade-in-up">
+            <div class="ident-card">
+              <span class="ident-card-num">01</span>
+              <div>
+                <h3 class="ident-card-title">A inspiração que você salvou</h3>
+                <p class="ident-card-desc">
+                  Talvez tenha sido aquele vestido usado por uma mulher que você admira. Uma peça que apareceu no Instagram, no Pinterest ou em uma ocasião especial e ficou guardada na sua galeria.
+                </p>
+              </div>
+            </div>
+
+            <div class="ident-card">
+              <span class="ident-card-num">02</span>
+              <div>
+                <h3 class="ident-card-title">O padrão das lojas que não valoriza</h3>
+                <p class="ident-card-desc">
+                  Você imagina como ficaria em você e começa a procurar algo parecido no varejo. Mas a modelagem não é a mesma, o tecido não convence ou o caimento não corresponde ao que você imaginou.
+                </p>
+              </div>
+            </div>
+
+            <div class="ident-card">
+              <span class="ident-card-num">03</span>
+              <div>
+                <h3 class="ident-card-title">O caminho da alfaiataria autoral</h3>
+                <p class="ident-card-desc">
+                  Existe outro caminho: levar sua inspiração para quem pode desenvolver uma peça personalizada com você, com respeito à sua silhueta, ao tecido ideal e ao seu conforto real.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SEÇÃO 3 — APRESENTAÇÃO DA SOLUÇÃO: O PROCESSO
+         ========================================================================== -->
+    <section class="section-spacing process-section" id="processo">
+      <div class="container">
+        
+        <div class="center-content fade-in-up">
+          <span class="eyebrow">COMO FUNCIONA O ATELIÊ</span>
+          <h2 class="section-title">
+            Da inspiração à peça <em>feita para você.</em>
+          </h2>
+          <p class="section-subtitle">
+            Um processo transparente e acolhedor em 4 etapas — do primeiro envio da foto até a entrega da criação adaptada ao seu corpo.
+          </p>
+        </div>
+
+        <div class="process-steps-grid">
+          
+          <!-- Step 1 -->
+          <article class="process-step-card fade-in-up">
+            <div class="step-badge">01</div>
+            <span class="step-label">Primeiro Passo</span>
+            <h3 class="step-title">Você Envia a Referência</h3>
+            <p class="step-description">
+              Envie a foto do vestido, conjunto ou look que despertou seu interesse. Pode ser uma imagem salva no celular, Pinterest ou Instagram.
+            </p>
+          </article>
+
+          <!-- Step 2 -->
+          <article class="process-step-card fade-in-up">
+            <div class="step-badge">02</div>
+            <span class="step-label">Alinhamento</span>
+            <h3 class="step-title">Conversamos Sobre os Detalhes</h3>
+            <p class="step-description">
+              Analisamos o modelo, a ocasião, os detalhes que você mais gosta, a viabilidade técnica e as possibilidades de personalização.
+            </p>
+          </article>
+
+          <!-- Step 3 -->
+          <article class="process-step-card fade-in-up">
+            <div class="step-badge">03</div>
+            <span class="step-label">Planejamento</span>
+            <h3 class="step-title">Definimos Medidas e Tecido</h3>
+            <p class="step-description">
+              Alinhamos suas medidas, as opções de tecido, a modelagem e os detalhes necessários para desenvolver sua peça com elegância e caimento.
+            </p>
+          </article>
+
+          <!-- Step 4 -->
+          <article class="process-step-card fade-in-up">
+            <div class="step-badge">04</div>
+            <span class="step-label">Criação</span>
+            <h3 class="step-title">Sua Peça Ganha Forma</h3>
+            <p class="step-description">
+              A criação é desenvolvida de acordo com o que foi combinado, buscando um caimento cuidadoso e uma experiência personalizada para você.
+            </p>
+          </article>
+
+        </div>
+
+        <div class="center-content fade-in-up">
+          <a href="#" class="btn btn-primary js-whatsapp-link" data-whatsapp-source="process" id="processWhatsappBtn">
+            <span>ENVIAR MINHA INSPIRAÇÃO</span>
+          </a>
+
+          <div class="process-guarantee-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+            <span>Você não precisa saber desenhar ou entender de tecidos. A especialista guia cada decisão com você.</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SEÇÃO 4 — GALERIA DE DESEJO
+         ========================================================================== -->
+    <section class="section-spacing gallery-section" id="galeria">
+      <div class="container">
+        
+        <div class="center-content fade-in-up">
+          <span class="eyebrow">PORTFÓLIO & INSPIRAÇÃO</span>
+          <h2 class="section-title">
+            Cada detalhe <em>faz diferença.</em>
+          </h2>
+          <p class="section-subtitle">
+            Uma seleção de possibilidades para inspirar sua próxima peça personalizada. Veja estilos e referências que podem ser adaptados para a sua silhueta.
+          </p>
+        </div>
+
+        <!-- Filter tabs -->
+        <div class="gallery-filters fade-in-up" role="tablist" aria-label="Filtrar galeria de inspirações">
+          <button class="gallery-filter-btn active" data-filter="all" role="tab" aria-selected="true">Todas as Peças</button>
+          <button class="gallery-filter-btn" data-filter="tailoring" role="tab" aria-selected="false">Alfaiataria Feminina</button>
+          <button class="gallery-filter-btn" data-filter="gowns" role="tab" aria-selected="false">Vestidos para Ocasiões</button>
+          <button class="gallery-filter-btn" data-filter="craft" role="tab" aria-selected="false">Detalhes & Acabamentos</button>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery-grid" id="galleryContainer">
+          
+          <!-- Card 1 -->
+          <article class="gallery-card fade-in-up" data-category="tailoring">
+            <div class="gallery-card-image-wrap">
+              <img src="assets/images/hero.jpg" alt="Blazer marfim estruturado em alfaiataria sob medida" width="400" height="533" loading="lazy">
+              <div class="gallery-card-overlay">
+                <button class="gallery-zoom-btn js-gallery-zoom" data-image="assets/images/hero.jpg" data-title="Blazer Marfim Estruturado" data-desc="Modelagem transpassada com botões clássicos, corte anatômico e forro acetinado. Peça curinga para ocasiões de autoridade e elegância refinada." aria-label="Ampliar foto do blazer marfim">
+                  Visualizar Detalhes
+                </button>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <span class="gallery-card-tag">Alfaiataria Feminina</span>
+              <h3 class="gallery-card-title">Blazer Marfim Estruturado</h3>
+              <p class="gallery-card-caption">Ombros com estrutura sutil, lapela alongada e acabamento primoroso. Adaptável a diferentes biotipos e tecidos nobres.</p>
+              <a href="#" class="gallery-card-cta js-whatsapp-link" data-whatsapp-source="gallery-blazer-marfim">
+                <span>Conversar sobre este estilo</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="gallery-card fade-in-up" data-category="gowns">
+            <div class="gallery-card-image-wrap">
+              <img src="assets/images/evening_gown.jpg" alt="Vestido de seda minimalista em tom champagne para festa" width="400" height="533" loading="lazy">
+              <div class="gallery-card-overlay">
+                <button class="gallery-zoom-btn js-gallery-zoom" data-image="assets/images/evening_gown.jpg" data-title="Vestido em Seda Arquitetônica" data-desc="Decote posterior esculpido, caimento fluido e estruturação interna para sustentação impecável sem marcas." aria-label="Ampliar foto do vestido de seda">
+                  Visualizar Detalhes
+                </button>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <span class="gallery-card-tag">Ocasiões Especiais</span>
+              <h3 class="gallery-card-title">Vestido em Seda Arquitetônica</h3>
+              <p class="gallery-card-caption">Linhas puras com decote geométrico nas costas. Ideal para casamentos, formaturas e celebrações exclusivas.</p>
+              <a href="#" class="gallery-card-cta js-whatsapp-link" data-whatsapp-source="gallery-vestido-seda">
+                <span>Conversar sobre este estilo</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="gallery-card fade-in-up" data-category="tailoring">
+            <div class="gallery-card-image-wrap">
+              <img src="assets/images/tailored_set.jpg" alt="Conjunto de alfaiataria em tom café com colete e pantalona" width="400" height="533" loading="lazy">
+              <div class="gallery-card-overlay">
+                <button class="gallery-zoom-btn js-gallery-zoom" data-image="assets/images/tailored_set.jpg" data-title="Conjunto Três Peças Café" data-desc="Composição de colete estruturado, calça pantalona de cós alto e blazer desconstruído em lã nobre." aria-label="Ampliar foto do conjunto café">
+                  Visualizar Detalhes
+                </button>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <span class="gallery-card-tag">Alfaiataria Contemporânea</span>
+              <h3 class="gallery-card-title">Conjunto Três Peças Café</h3>
+              <p class="gallery-card-caption">Pantalona com caimento amplo e colete sob medida. Sofisticação atemporal com máximo conforto ao sentar e caminhar.</p>
+              <a href="#" class="gallery-card-cta js-whatsapp-link" data-whatsapp-source="gallery-conjunto-cafe">
+                <span>Conversar sobre este estilo</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="gallery-card fade-in-up" data-category="tailoring">
+            <div class="gallery-card-image-wrap">
+              <img src="assets/images/bespoke_result.jpg" alt="Vestido blazer esculpido em tom preto profundo sob medida" width="400" height="533" loading="lazy">
+              <div class="gallery-card-overlay">
+                <button class="gallery-zoom-btn js-gallery-zoom" data-image="assets/images/bespoke_result.jpg" data-title="Vestido Blazer Esculpido" data-desc="Inspirado em referências internacionais de tapete vermelho, adaptado com comprimento midi elegante e corte anatômico." aria-label="Ampliar foto do vestido blazer">
+                  Visualizar Detalhes
+                </button>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <span class="gallery-card-tag">Peças Sob Medida</span>
+              <h3 class="gallery-card-title">Vestido Blazer Esculpido</h3>
+              <p class="gallery-card-caption">Uma peça híbrida marcante que une o rigor da alfaiataria clássica à feminilidade de um vestido moderno.</p>
+              <a href="#" class="gallery-card-cta js-whatsapp-link" data-whatsapp-source="gallery-vestido-blazer">
+                <span>Conversar sobre este estilo</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 5 -->
+          <article class="gallery-card fade-in-up" data-category="craft">
+            <div class="gallery-card-image-wrap">
+              <img src="assets/images/craft_detail.jpg" alt="Costura manual de forro de seda em jaqueta de alfaiataria" width="400" height="533" loading="lazy">
+              <div class="gallery-card-overlay">
+                <button class="gallery-zoom-btn js-gallery-zoom" data-image="assets/images/craft_detail.jpg" data-title="Costura e Forro Artesanal" data-desc="Ponto invisível e fixação manual de forros nobres. Cada costura interna é cuidada para oferecer toque macio à pele." aria-label="Ampliar foto do acabamento artesanal">
+                  Visualizar Detalhes
+                </button>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <span class="gallery-card-tag">Acabamento & Detalhes</span>
+              <h3 class="gallery-card-title">Costura e Forro Artesanal</h3>
+              <p class="gallery-card-caption">O verdadeiro luxo mora no interior da roupa: forros embutidos, acabamentos sem fios soltos e toque aveludado.</p>
+              <a href="#" class="gallery-card-cta js-whatsapp-link" data-whatsapp-source="gallery-acabamento-artesanal">
+                <span>Conversar sobre este estilo</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 6 -->
+          <article class="gallery-card fade-in-up" data-category="craft">
+            <div class="gallery-card-image-wrap">
+              <img src="assets/images/specialist.jpg" alt="Moulage e ajuste fino de casaco de lã em manequim de alfaiataria" width="400" height="533" loading="lazy">
+              <div class="gallery-card-overlay">
+                <button class="gallery-zoom-btn js-gallery-zoom" data-image="assets/images/specialist.jpg" data-title="Modelagem & Moulage Tridimensional" data-desc="Construção tridimensional sobre o manequim para garantir proporcionalidade correta de ombros, busto e cintura." aria-label="Ampliar foto da modelagem">
+                  Visualizar Detalhes
+                </button>
+              </div>
+            </div>
+            <div class="gallery-card-body">
+              <span class="gallery-card-tag">Processo de Criação</span>
+              <h3 class="gallery-card-title">Modelagem & Moulage</h3>
+              <p class="gallery-card-caption">Ajuste fino de proporções no manequim para antecipar o caimento perfeito antes mesmo do corte definitivo.</p>
+              <a href="#" class="gallery-card-cta js-whatsapp-link" data-whatsapp-source="gallery-moulage">
+                <span>Conversar sobre este estilo</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="center-content fade-in-up">
+          <a href="#" class="btn btn-primary js-whatsapp-link" data-whatsapp-source="gallery-general" id="galleryMainCta">
+            <span>QUERO CONVERSAR SOBRE MEU MODELO</span>
+          </a>
+          <span class="microcopy">Tem uma foto diferente dessas? Você pode enviar qualquer modelo que tenha gostado.</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SEÇÃO 5 — DIFERENCIAIS DO SERVIÇO
+         ========================================================================== -->
+    <section class="section-spacing differentials-section" id="diferenciais">
+      <div class="container">
+        
+        <div class="center-content fade-in-up">
+          <span class="eyebrow">A EXPERIÊNCIA SOB MEDIDA</span>
+          <h2 class="section-title">
+            Mais do que escolher uma roupa. <em>Participar da criação.</em>
+          </h2>
+          <p class="section-subtitle">
+            Quando você veste uma peça feita exclusivamente para você, tudo muda: a postura, a sensação de segurança e a liberdade de usar o que realmente expressa sua personalidade.
+          </p>
+        </div>
+
+        <div class="diff-grid">
+          
+          <div class="diff-card fade-in-up">
+            <div class="diff-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+              </svg>
+            </div>
+            <h3 class="diff-title">Personalização</h3>
+            <p class="diff-desc">Uma peça desenvolvida a partir da referência escolhida e das suas preferências individuais.</p>
+          </div>
+
+          <div class="diff-card fade-in-up">
+            <div class="diff-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M8 12h8"></path>
+                <path d="M12 8v8"></path>
+              </svg>
+            </div>
+            <h3 class="diff-title">Atenção às Medidas</h3>
+            <p class="diff-desc">Uma proposta pensada para as suas medidas reais, com foco em um caimento adequado ao seu biotipo.</p>
+          </div>
+
+          <div class="diff-card fade-in-up">
+            <div class="diff-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+                <line x1="16" y1="8" x2="2" y2="22"></line>
+                <line x1="17.5" y1="15" x2="9" y2="15"></line>
+              </svg>
+            </div>
+            <h3 class="diff-title">Escolha dos Detalhes</h3>
+            <p class="diff-desc">Converse sobre tecido, acabamento e elementos que fazem sentido para o resultado e ocasião desejados.</p>
+          </div>
+
+          <div class="diff-card fade-in-up">
+            <div class="diff-icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+            <h3 class="diff-title">Atendimento Individualizado</h3>
+            <p class="diff-desc">Você pode tirar dúvidas e alinhar suas expectativas diretamente com a especialista, sem intermediários.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SEÇÃO 6 — STORYTELLING DA ESPECIALISTA
+         ========================================================================== -->
+    <section class="section-spacing story-section" id="especialista">
+      <div class="container">
+        <div class="story-grid">
+          
+          <div class="story-visual fade-in-up">
+            <figure class="story-image-wrap">
+              <img src="assets/images/specialist.jpg" alt="Especialista em alfaiataria em seu ateliê ajustando tecido em manequim" width="500" height="667" loading="lazy">
+            </figure>
+            <div class="story-badge-bottom">
+              <p>“Cuidamos de cada ponto para que a roupa pertença à sua história.”</p>
+            </div>
+          </div>
+
+          <div class="story-content fade-in-up">
+            <span class="eyebrow">A PROFISSIONAL POR TRÁS DA CRIAÇÃO</span>
+            <h2 class="section-title">
+              Por trás de cada peça, <em>existe um olhar atento aos detalhes.</em>
+            </h2>
+
+            <blockquote class="story-quote-main">
+              “Meu trabalho começa quando você me mostra uma peça que ama.”
+            </blockquote>
+
+            <div class="story-text-body">
+              <p>
+                A partir dessa inspiração, conversamos sobre os detalhes, as possibilidades e o que faz sentido para você. Cada escolha é importante para transformar uma referência em uma criação personalizada.
+              </p>
+              <p>
+                Acredito que vestir-se bem também significa encontrar peças que conversem com seu estilo e com a forma como você deseja se sentir: elegante, confortável e segura de sua presença.
+              </p>
+            </div>
+
+            <!-- Editable Atelier Information Box -->
+            <div class="story-meta-box">
+              <div>
+                <span class="story-meta-label">Ateliê & Especialidade</span>
+                <p class="story-meta-value" data-config="specialistTitle">Alfaiataria Feminina & Peças Sob Medida</p>
+              </div>
+              <div>
+                <span class="story-meta-label">Localização & Atendimento</span>
+                <p class="story-meta-value" data-config="cityState">São Paulo, SP • Atendimento com Hora Marcada</p>
+              </div>
+            </div>
+
+            <div style="margin-top: 2rem;">
+              <a href="#" class="btn btn-primary js-whatsapp-link" data-whatsapp-source="specialist" id="storytellingWhatsappBtn">
+                <span>Conversar com a Especialista</span>
+              </a>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SEÇÃO 7 — PROVA VISUAL E CONFIANÇA (REFERÊNCIA VS. CRIAÇÃO)
+         ========================================================================== -->
+    <section class="section-spacing proof-section" id="prova-visual">
+      <div class="container">
+        
+        <div class="center-content fade-in-up">
+          <span class="eyebrow">PROVA VISUAL & TRANSPARÊNCIA</span>
+          <h2 class="section-title">
+            O cuidado está <em>nos detalhes.</em>
+          </h2>
+          <p class="section-subtitle">
+            Acompanhe como uma imagem de referência enviada pela cliente é interpretada com rigor técnico e transformada em uma peça ajustada ao corpo.
+          </p>
+        </div>
+
+        <div class="proof-showcase-box fade-in-up">
+          <div class="proof-comparison-grid">
+            
+            <!-- Side 1: Reference -->
+            <div class="proof-comparison-card">
+              <span class="proof-pill-badge reference">Inspiração Inicial (Foto Enviada)</span>
+              <div class="proof-img-container">
+                <img src="assets/images/inspiration_reference.jpg" alt="Foto de referência de street style de moda parisiense" width="500" height="667" loading="lazy">
+              </div>
+              <h3 class="proof-item-title">A Imagem Salva no Celular</h3>
+              <p class="proof-item-caption">
+                Um look visto em celebridade, passarela ou Pinterest que inspirou a silhueta, lapela e proposta do modelo.
+              </p>
+            </div>
+
+            <!-- Side 2: Bespoke Creation -->
+            <div class="proof-comparison-card">
+              <span class="proof-pill-badge result">Criação sob Medida (Ateliê)</span>
+              <div class="proof-img-container">
+                <img src="assets/images/bespoke_result.jpg" alt="Criação sob medida adaptada ao biotipo da cliente no ateliê" width="500" height="667" loading="lazy">
+              </div>
+              <h3 class="proof-item-title">A Peça Desenvolvida para Ela</h3>
+              <p class="proof-item-caption">
+                Modelagem adaptada às medidas individuais, tecido nobre selecionado e acabamento artesanal interno.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Technical Notes -->
+          <div class="proof-notes-strip">
+            <div class="proof-note-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div class="proof-note-text">
+                <strong>Análise Técnica</strong>
+                <p>Avaliamos caimento, peso do tecido e sustentação estrutural antes do corte.</p>
+              </div>
+            </div>
+            <div class="proof-note-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div class="proof-note-text">
+                <strong>Adaptação Real</strong>
+                <p>Ajustamos o comprimento e as proporções ao biotipo de quem vai vestir.</p>
+              </div>
+            </div>
+            <div class="proof-note-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              <div class="proof-note-text">
+                <strong>Acabamento de Luxo</strong>
+                <p>Forros embutidos e pontos manuais que garantem conforto e longevidade.</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="proof-disclaimer-note">
+            * Cada peça é uma criação personalizada inspirada na referência enviada, respeitando a anatomia da cliente e a disponibilidade dos melhores materiais do mercado.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SEÇÃO 8 — QUEBRA DE OBJEÇÕES (FAQ INTERATIVO)
+         ========================================================================== -->
+    <section class="section-spacing faq-section" id="duvidas">
+      <div class="container container-narrow">
+        
+        <div class="center-content fade-in-up">
+          <span class="eyebrow">DÚVIDAS FREQUENTES</span>
+          <h2 class="section-title">
+            Tem uma ideia em mente? <em>Vamos descobrir como torná-la possível.</em>
+          </h2>
+          <p class="section-subtitle">
+            Transparência do início ao fim para você se sentir segura em cada etapa da confecção.
+          </p>
+        </div>
+
+        <div class="faq-accordion" id="faqAccordion">
+          
+          <!-- Item 1 -->
+          <div class="faq-item fade-in-up">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-1">
+              <span>Preciso saber o nome do tecido?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-content" id="faq-ans-1">
+              <p class="faq-answer">
+                Não. Você pode começar simplesmente enviando a foto. A especialista orientará a conversa sobre as possibilidades de tecido, caimento e construção da peça que melhor atendem ao modelo desejado.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="faq-item fade-in-up">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-2">
+              <span>Posso enviar uma foto de uma famosa ou influenciadora?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-content" id="faq-ans-2">
+              <p class="faq-answer">
+                Sim. A fotografia pode servir como referência inicial para entendermos o estilo, o corte e a proposta. A viabilidade do modelo, os materiais e os detalhes serão avaliados individualmente na nossa conversa.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="faq-item fade-in-up">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-3">
+              <span>A roupa ficará exatamente igual à foto?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-content" id="faq-ans-3">
+              <p class="faq-answer">
+                A referência orienta o processo, mas o resultado depende da modelagem, dos materiais disponíveis, da construção da peça e dos ajustes combinados. O objetivo é desenvolver uma versão personalizada inspirada no modelo escolhido, perfeitamente adaptada ao seu corpo.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="faq-item fade-in-up">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-4">
+              <span>Como funciona a questão das medidas?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-content" id="faq-ans-4">
+              <p class="faq-answer">
+                A especialista explicará com clareza como obter ou fornecer as medidas necessárias para o modelo e o atendimento — seja presencialmente com hora marcada ou através de orientações práticas e precisas à distância.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="faq-item fade-in-up">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-5">
+              <span>Quanto custa uma peça personalizada?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-content" id="faq-ans-5">
+              <p class="faq-answer">
+                O valor depende do modelo, dos materiais escolhidos, da complexidade do corte e dos detalhes solicitados. Envie sua referência pelo WhatsApp para conversar sobre as possibilidades e receber um orçamento personalizado.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="faq-item fade-in-up">
+            <button class="faq-trigger" aria-expanded="false" aria-controls="faq-ans-6">
+              <span>Quanto tempo demora?</span>
+              <span class="faq-icon" aria-hidden="true"></span>
+            </button>
+            <div class="faq-content" id="faq-ans-6">
+              <p class="faq-answer">
+                O prazo será informado após a avaliação do modelo e o alinhamento da agenda da profissional. Se você tem uma data específica para um evento ou ocasião especial, informe logo no primeiro contato para avaliarmos a disponibilidade.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SEÇÃO 9 — CTA FINAL DE ALTA CONVERSÃO
+         ========================================================================== -->
+    <section class="final-cta-section" id="contato">
+      <div class="container">
+        <div class="final-cta-box fade-in-up">
+          <span class="eyebrow eyebrow-no-prefix" style="color: var(--color-gold-light); letter-spacing: 0.25em;">SEU PRÓXIMO LOOK COMEÇA AQUI</span>
+          
+          <h2 class="final-cta-title">
+            A próxima peça que você vai amar <em>pode começar com uma foto.</em>
+          </h2>
+
+          <p class="final-cta-text">
+            Escolha a referência, envie para a especialista e descubra as possibilidades de criar uma peça personalizada para você.
+          </p>
+
+          <div class="final-cta-btn-wrap">
+            <a href="#" class="btn btn-gold final-cta-btn js-whatsapp-link" data-whatsapp-source="final-cta" id="finalCtaBtn">
+              <svg class="btn-icon" viewBox="0 0 24 24">
+                <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"/>
+              </svg>
+              <span>QUERO ENVIAR MINHA FOTO</span>
+            </a>
+
+            <span class="microcopy final-cta-microcopy">
+              Seu primeiro passo é uma conversa. Vamos entender o que você deseja criar.
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       SEÇÃO 10 — RODAPÉ PREMIUM
+       ========================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Info -->
+        <div>
+          <span class="footer-brand-title" data-config="brandName">Ateliê Autoral</span>
+          <p class="footer-brand-spec" data-config="specialistTitle">Alfaiataria Feminina & Peças Sob Medida</p>
+          <p class="footer-brand-desc">
+            Criação de peças personalizadas inspiradas em referências de moda, valorizando a individualidade, as medidas e o caimento ideal de cada mulher.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="footer-col-title">Navegação</h4>
+          <ul class="footer-links-list">
+            <li><a href="#hero" class="footer-link">Início</a></li>
+            <li><a href="#processo" class="footer-link">Como Funciona</a></li>
+            <li><a href="#galeria" class="footer-link">Galeria de Inspiração</a></li>
+            <li><a href="#diferenciais" class="footer-link">Diferenciais do Serviço</a></li>
+            <li><a href="#especialista" class="footer-link">A Especialista</a></li>
+            <li><a href="#duvidas" class="footer-link">Dúvidas Frequentes</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact & Location -->
+        <div>
+          <h4 class="footer-col-title">Atendimento</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+            <span data-config="cityState">São Paulo, SP • Atendimento presencial com hora marcada</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            <a href="#" class="footer-link js-whatsapp-link" data-whatsapp-source="footer">WhatsApp Direto</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-link js-instagram-link" data-config="instagramHandle">@atelieautoral</a>
+          </div>
+        </div>
+
+        <!-- Privacy & Ethics Note -->
+        <div>
+          <h4 class="footer-col-title">Compromisso Ético</h4>
+          <p class="footer-brand-desc" style="font-size: 0.8125rem;">
+            Cada projeto é uma criação autoral inspirada nas referências enviadas pela cliente, respeitando a modelagem adaptada, biotipos reais e a viabilidade dos tecidos. Não produzimos cópias industriais.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom-bar">
+        <p>&copy; <span id="currentYear">2026</span> <span data-config="brandName">Ateliê Autoral</span>. Todos os direitos reservados.</p>
+        <p>Alfaiataria Personalizada • Vestidos sob Medida</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       FLOATING WHATSAPP BUTTON (CONVERSÃO MOBILE & DESKTOP)
+       ========================================================================== -->
+  <a href="#" class="floating-whatsapp js-whatsapp-link" id="floatingWhatsappBtn" data-whatsapp-source="floating" aria-label="Falar com a especialista no WhatsApp">
+    <span class="floating-whatsapp-tooltip">Converse com a especialista</span>
+    <span class="floating-whatsapp-btn">
+      <svg viewBox="0 0 24 24">
+        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"/>
+      </svg>
+    </span>
+  </a>
+
+  <!-- ==========================================================================
+       MODAL LIGHTBOX (ZOOM DE IMAGEM DA GALERIA)
+       ========================================================================== -->
+  <div class="lightbox-modal" id="lightboxModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-card">
+      <button class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Fechar visualização">&times;</button>
+      <div class="lightbox-img-wrap">
+        <img src="" alt="" id="lightboxImg">
+      </div>
+      <div class="lightbox-details">
+        <span class="lightbox-tag">Detalhe do Modelo</span>
+        <h3 class="lightbox-title" id="lightboxTitle"></h3>
+        <p class="lightbox-desc" id="lightboxDesc"></p>
+        <a href="#" class="btn btn-primary js-whatsapp-link" id="lightboxWhatsappBtn" data-whatsapp-source="lightbox">
+          <span>Quero uma peça inspirada neste modelo</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Application -->
+  <script src="index.js"></script>
+</body>
+</html>
