@@ -2158,6 +2158,37 @@ ul, ol {
     grid-template-columns: 1fr;
   }
 
+  /* Mobile Slider Optimizations: vertical elegance, no text overlap */
+  .comparison-slider-container {
+    aspect-ratio: 4 / 5;
+    touch-action: pan-y;
+  }
+
+  .slider-header-labels {
+    padding: 0.65rem 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .slider-label-item {
+    font-size: 0.6875rem;
+    letter-spacing: 0.05em;
+  }
+
+  .slider-label-instruction {
+    display: none; /* simplifies mobile bar for maximum space */
+  }
+
+  .comparison-slider-handle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .comparison-slider-hint {
+    font-size: 0.6875rem;
+    margin-top: 0.65rem;
+    margin-bottom: 1.5rem;
+  }
+
   .story-meta-box {
     grid-template-columns: 1fr;
   }
