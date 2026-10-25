@@ -1346,33 +1346,58 @@ ul, ol {
   z-index: 1;
 }
 
-.comparison-slider-badge {
-  position: absolute;
-  top: 1.25rem;
-  padding: 0.45rem 1rem;
-  font-size: 0.6875rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
+/* --- Dedicated Clean Header Labels Bar (No Photo Overlap) --- */
+.slider-header-labels {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  background-color: var(--color-ivory-light);
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+}
+
+.slider-label-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  border-radius: 2px;
-  z-index: 5;
-  pointer-events: none;
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  color: var(--color-black);
 }
 
-.comparison-slider-badge.before {
-  left: 1.25rem;
-  background-color: rgba(247, 243, 237, 0.94);
-  color: var(--color-coffee);
-  border: 1px solid var(--border-gold);
+.label-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
 }
 
-.comparison-slider-badge.after {
-  right: 1.25rem;
-  background-color: rgba(25, 24, 22, 0.92);
-  color: var(--color-gold-light);
-  border: 1px solid rgba(180, 154, 114, 0.4);
+.before-dot {
+  background-color: var(--color-gold);
+}
+
+.after-dot {
+  background-color: var(--color-black);
+}
+
+.slider-label-instruction {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-gold-dark);
+}
+
+.slider-label-instruction svg {
+  width: 12px;
+  height: 12px;
 }
 
 .comparison-slider-divider {

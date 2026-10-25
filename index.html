@@ -640,18 +640,34 @@
 
           <!-- Interactive Before/After Comparison Slider -->
           <div class="comparison-slider-wrapper" id="comparisonSliderWrapper">
+            
+            <!-- Dedicated Clean Header Labels (Zero Overlap on Mobile & Desktop) -->
+            <div class="slider-header-labels" aria-hidden="true">
+              <span class="slider-label-item before-label">
+                <span class="label-dot before-dot"></span>
+                <span>Foto de Inspiração</span>
+              </span>
+              <span class="slider-label-instruction">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                <span>Deslize</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </span>
+              <span class="slider-label-item after-label">
+                <span class="label-dot after-dot"></span>
+                <span>Criação Sob Medida</span>
+              </span>
+            </div>
+
             <div class="comparison-slider-container" id="comparisonSliderContainer" aria-label="Comparador interativo de referência vs criação sob medida">
               
               <!-- Bottom/After Layer: Criação sob Medida -->
               <div class="comparison-slider-image comparison-slider-after">
                 <img src="assets/images/bespoke_result.jpg" alt="Criação de alfaiataria sob medida adaptada à silhueta da cliente no ateliê" width="860" height="645" loading="lazy">
-                <span class="comparison-slider-badge after">Criação Sob Medida (Ateliê)</span>
               </div>
 
               <!-- Top/Before Layer: Foto de Referência -->
               <div class="comparison-slider-image comparison-slider-before" id="sliderBefore">
                 <img src="assets/images/inspiration_reference.jpg" alt="Foto de referência de street style parisiense salva pela cliente" width="860" height="645" loading="lazy">
-                <span class="comparison-slider-badge before">Foto de Referência (Inspiração)</span>
               </div>
 
               <!-- Vertical Gold Divider -->
@@ -666,9 +682,7 @@
             </div>
             
             <p class="comparison-slider-hint">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
-              <span>Arraste o botão central para comparar a inspiração com a peça confeccionada</span>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              <span>Toque ou arraste para comparar a foto de referência com a peça criada no ateliê</span>
             </p>
           </div>
 
