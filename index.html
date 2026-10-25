@@ -53,6 +53,9 @@
 </head>
 <body>
 
+  <!-- Subtle organic film grain & linen texture overlay -->
+  <div class="luxury-noise-overlay" aria-hidden="true"></div>
+
   <!-- ==========================================================================
        HEADER / NAVBAR
        ========================================================================== -->
@@ -65,11 +68,11 @@
 
       <nav class="nav-menu" aria-label="Navegação principal">
         <ul class="nav-links">
-          <li><a href="#processo" class="nav-link">O Processo</a></li>
-          <li><a href="#galeria" class="nav-link">Inspirações</a></li>
-          <li><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
-          <li><a href="#especialista" class="nav-link">A Especialista</a></li>
-          <li><a href="#duvidas" class="nav-link">Dúvidas</a></li>
+          <li><a href="#processo" class="nav-link chalk-link">O Processo</a></li>
+          <li><a href="#galeria" class="nav-link chalk-link">Inspirações</a></li>
+          <li><a href="#diferenciais" class="nav-link chalk-link">Diferenciais</a></li>
+          <li><a href="#especialista" class="nav-link chalk-link">A Especialista</a></li>
+          <li><a href="#duvidas" class="nav-link chalk-link">Dúvidas</a></li>
         </ul>
       </nav>
 
@@ -171,7 +174,7 @@
 
           <!-- Hero Image & Visual Composition -->
           <div class="hero-visual fade-in-up in-view">
-            <figure class="hero-image-wrapper">
+            <figure class="hero-image-wrapper curtain-reveal in-view">
               <img src="assets/images/hero.jpg" alt="Mulher elegante vestindo blazer de alfaiataria marfim sob medida em um ateliê de alta costura" width="600" height="800" loading="eager">
             </figure>
 
@@ -556,7 +559,7 @@
         <div class="story-grid">
           
           <div class="story-visual fade-in-up">
-            <figure class="story-image-wrap">
+            <figure class="story-image-wrap curtain-reveal">
               <img src="assets/images/specialist.jpg" alt="Especialista em alfaiataria em seu ateliê ajustando tecido em manequim" width="500" height="667" loading="lazy">
             </figure>
             <div class="story-badge-bottom">
@@ -575,7 +578,7 @@
             </blockquote>
 
             <div class="story-text-body">
-              <p>
+              <p class="editorial-drop-cap">
                 A partir dessa inspiração, conversamos sobre os detalhes, as possibilidades e o que faz sentido para você. Cada escolha é importante para transformar uma referência em uma criação personalizada.
               </p>
               <p>
@@ -624,7 +627,53 @@
         </div>
 
         <div class="proof-showcase-box fade-in-up">
-          <div class="proof-comparison-grid">
+          
+          <!-- View Mode Switcher -->
+          <div class="proof-view-switcher" role="tablist" aria-label="Alternar modo de comparação visual">
+            <button class="proof-switch-btn active" id="btnModeSlider" role="tab" aria-selected="true">
+              Slider Interativo
+            </button>
+            <button class="proof-switch-btn" id="btnModeSideBySide" role="tab" aria-selected="false">
+              Visualização Lado a Lado
+            </button>
+          </div>
+
+          <!-- Interactive Before/After Comparison Slider -->
+          <div class="comparison-slider-wrapper" id="comparisonSliderWrapper">
+            <div class="comparison-slider-container" id="comparisonSliderContainer" aria-label="Comparador interativo de referência vs criação sob medida">
+              
+              <!-- Bottom/After Layer: Criação sob Medida -->
+              <div class="comparison-slider-image comparison-slider-after">
+                <img src="assets/images/bespoke_result.jpg" alt="Criação de alfaiataria sob medida adaptada à silhueta da cliente no ateliê" width="860" height="645" loading="lazy">
+                <span class="comparison-slider-badge after">Criação Sob Medida (Ateliê)</span>
+              </div>
+
+              <!-- Top/Before Layer: Foto de Referência -->
+              <div class="comparison-slider-image comparison-slider-before" id="sliderBefore">
+                <img src="assets/images/inspiration_reference.jpg" alt="Foto de referência de street style parisiense salva pela cliente" width="860" height="645" loading="lazy">
+                <span class="comparison-slider-badge before">Foto de Referência (Inspiração)</span>
+              </div>
+
+              <!-- Vertical Gold Divider -->
+              <div class="comparison-slider-divider" id="sliderDivider"></div>
+
+              <!-- Brass/Gold Draggable Handle -->
+              <button class="comparison-slider-handle" id="sliderHandle" aria-label="Arrastar divisor comparativo" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                <svg viewBox="0 0 24 24">
+                  <path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z M15.41 7.41L10.83 12l4.58 4.59L14 18l-6-6 6-6 1.41 1.41z"/>
+                </svg>
+              </button>
+            </div>
+            
+            <p class="comparison-slider-hint">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+              <span>Arraste o botão central para comparar a inspiração com a peça confeccionada</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+            </p>
+          </div>
+
+          <!-- Side-by-side mode (hidden by default) -->
+          <div class="proof-comparison-grid" id="proofComparisonGrid">
             
             <!-- Side 1: Reference -->
             <div class="proof-comparison-card">

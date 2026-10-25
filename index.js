@@ -128,7 +128,10 @@ document.addEventListener('DOMContentLoaded', () => {
   // H. Configurar botão flutuante de WhatsApp
   setupFloatingButton();
 
-  // I. Atualizar ano no rodapé
+  // I. Configurar comparador interativo de Antes/Depois (Seção 7)
+  setupComparisonSlider();
+
+  // J. Atualizar ano no rodapé
   const yearEl = document.getElementById('currentYear');
   if (yearEl) {
     yearEl.textContent = new Date().getFullYear();
@@ -416,7 +419,7 @@ function setupScrollObservers() {
     return;
   }
 
-  // Fade in animation observer
+  // Fade in and Curtain reveal animation observer
   const fadeObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -426,11 +429,11 @@ function setupScrollObservers() {
     });
   }, {
     root: null,
-    rootMargin: '0px 0px -60px 0px',
+    rootMargin: '0px 0px -40px 0px',
     threshold: 0.15
   });
 
-  document.querySelectorAll('.fade-in-up').forEach(el => {
+  document.querySelectorAll('.fade-in-up, .curtain-reveal').forEach(el => {
     fadeObserver.observe(el);
   });
 
@@ -445,7 +448,7 @@ function setupScrollObservers() {
       }
     });
   }, {
-    threshold: 0.4
+    threshold: 0.35
   });
 
   document.querySelectorAll('section[id]').forEach(section => {
@@ -467,4 +470,120 @@ function setupFloatingButton() {
       floatingBtn.classList.remove('visible');
     }
   }, { passive: true });
+}
+
+/**
+ * Comparador Interativo Antes/Depois (Inspiração vs Criação sob Medida)
+ */
+function setupComparisonSlider() {
+  const container = document.getElementById('comparisonSliderContainer');
+  const sliderBefore = document.getElementById('sliderBefore');
+  const sliderDivider = document.getElementById('sliderDivider');
+  const sliderHandle = document.getElementById('sliderHandle');
+  const btnModeSlider = document.getElementById('btnModeSlider');
+  const btnModeSideBySide = document.getElementById('btnModeSideBySide');
+  const sliderWrapper = document.getElementById('comparisonSliderWrapper');
+  const gridWrapper = document.getElementById('proofComparisonGrid');
+
+  if (!container || !sliderBefore || !sliderDivider || !sliderHandle) return;
+
+  let isDragging = false;
+
+  function updateSliderPosition(percent) {
+    const clamped = Math.max(0, Math.min(100, percent));
+    sliderBefore.style.width = `${clamped}%`;
+    sliderDivider.style.left = `${clamped}%`;
+    sliderHandle.style.left = `${clamped}%`;
+    sliderHandle.setAttribute('aria-valuenow', Math.round(clamped));
+  }
+
+  function handleMove(clientX) {
+    const rect = container.getBoundingClientRect();
+    const x = clientX - rect.left;
+    const percent = (x / rect.width) * 100;
+    updateSliderPosition(percent);
+  }
+
+  // Mouse drag events
+  container.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    handleMove(e.clientX);
+  });
+
+  window.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+    handleMove(e.clientX);
+  });
+
+  window.addEventListener('mouseup', () => {
+    if (isDragging) {
+      isDragging = false;
+      trackEvent('slider_interacted');
+    }
+  });
+
+  // Touch drag events (Mobile)
+  container.addEventListener('touchstart', (e) => {
+    isDragging = true;
+    if (e.touches && e.touches[0]) {
+      handleMove(e.touches[0].clientX);
+    }
+  }, { passive: true });
+
+  window.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    if (e.touches && e.touches[0]) {
+      handleMove(e.touches[0].clientX);
+    }
+  }, { passive: true });
+
+  window.addEventListener('touchend', () => {
+    if (isDragging) {
+      isDragging = false;
+      trackEvent('slider_interacted');
+    }
+  });
+
+  // Keyboard accessibility
+  sliderHandle.addEventListener('keydown', (e) => {
+    let current = parseFloat(sliderHandle.getAttribute('aria-valuenow') || '50');
+    if (e.key === 'ArrowLeft') {
+      current = Math.max(0, current - 5);
+      updateSliderPosition(current);
+      e.preventDefault();
+    } else if (e.key === 'ArrowRight') {
+      current = Math.min(100, current + 5);
+      updateSliderPosition(current);
+      e.preventDefault();
+    } else if (e.key === 'Home') {
+      updateSliderPosition(0);
+      e.preventDefault();
+    } else if (e.key === 'End') {
+      updateSliderPosition(100);
+      e.preventDefault();
+    }
+  });
+
+  // Mode Switcher (Slider vs Side-by-side)
+  btnModeSlider?.addEventListener('click', () => {
+    btnModeSlider.classList.add('active');
+    btnModeSlider.setAttribute('aria-selected', 'true');
+    btnModeSideBySide?.classList.remove('active');
+    btnModeSideBySide?.setAttribute('aria-selected', 'false');
+
+    sliderWrapper?.classList.remove('hidden');
+    gridWrapper?.classList.remove('active');
+    trackEvent('proof_mode_switched', { mode: 'slider' });
+  });
+
+  btnModeSideBySide?.addEventListener('click', () => {
+    btnModeSideBySide.classList.add('active');
+    btnModeSideBySide.setAttribute('aria-selected', 'true');
+    btnModeSlider?.classList.remove('active');
+    btnModeSlider?.setAttribute('aria-selected', 'false');
+
+    sliderWrapper?.classList.add('hidden');
+    gridWrapper?.classList.add('active');
+    trackEvent('proof_mode_switched', { mode: 'side-by-side' });
+  });
 }
